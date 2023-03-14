@@ -97,7 +97,7 @@ const CartContainer = () => {
             addDoc(orderCollection,order)
             .then(({id})=> navigate('/ordenes/'+id))
             
-
+            clearProductCartList()
             console.log("exito")
 
           }else{
