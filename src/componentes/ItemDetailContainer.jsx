@@ -21,7 +21,7 @@ function ItemDetailContainer() {
       const producto = await getDoc(productoRef);
 
       if (producto.exists()) {
-        setProduc(producto.data())
+        setProduc({...producto.data(),id:id})
       } else {
         console.log("No such document!");
       }

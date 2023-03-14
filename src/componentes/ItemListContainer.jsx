@@ -29,7 +29,6 @@ const ItemListContainer = ({greeting}) => {
         
     }
       
-      //console.log(products)
   }
 
   useEffect(()=>{

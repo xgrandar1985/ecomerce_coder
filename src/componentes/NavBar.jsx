@@ -12,22 +12,23 @@ export const NavBar = () => {
     <header>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
 
-            <FontAwesomeIcon 
-              icon={faHouse}
-              className="ms-1"
-              size="lg"
-            />
-            <span className="ms-2 h5">Inicio</span>
-          </a>
+          <Link to="/" className="nav-link">
+
+              <FontAwesomeIcon 
+                icon={faHouse}
+                className="ms-1"
+                size="lg"
+              />
+              <span className="ms-2 h5">Inicio</span>
+            </Link>
 
           <div className={"navbar-collapse offcanvas-collapse"}>
           <div className="navbar-nav me-auto mb-lg-0">
 
               <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Dropdown Button
+                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                  Productos
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>

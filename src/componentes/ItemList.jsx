@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 
 export const ItemList = ({products})=>{
+    //console.log(products)
 
     return(       
         <>

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
-export const ItemCount = ({cantidad})=>{
-    const [count, setCount] = useState(0);
+export const ItemCount = ({cantidad,initial,onAdd})=>{
+    const [count, setCount] = useState(initial);
 
     const decrementar = ()=>{
         if(count>1){
@@ -34,7 +34,7 @@ export const ItemCount = ({cantidad})=>{
         </div>
         <div className="col">
             
-            <button className="btn btn-outline-dark py-2 w-50" disabled={cantidad === 0}>Agregar al carrito</button>
+            <button className="btn btn-outline-dark py-2 w-50" disabled={cantidad === 0} onClick={()=>onAdd(count)}>Agregar al carrito</button>
         </div>
         </>
     )
