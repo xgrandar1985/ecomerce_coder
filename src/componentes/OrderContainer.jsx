@@ -102,6 +102,7 @@ const OrderContainer = () => {
             <p className='ubicarIzquierda'><b>Nombre y apellido:</b> {order.cliente.nombre} {order.cliente.apellido}</p>
             <p className='ubicarIzquierda'><b>Correo:</b> {order.cliente.correo}</p>
             <p className='ubicarIzquierda'><b>Telefono:</b> {order.cliente.telefono}</p>
+            <p className='ubicarIzquierda'><b>Fecha:</b> {order.fecha}</p>
           </div>
           </div>
           <div className="row">
