@@ -23,6 +23,7 @@ function App() {
                       <Route path='/items/:tipo' element={<ItemListContainer greeting=" "/>}/> 
                       <Route path="/carrito" element={<CartContainer/>}/>
                       <Route path='/ordenes/:ordenid' element={<OrderContainer/>}/> 
+                      <Route path='/ordenes' element={<OrderContainer/>}/> 
                     </Routes>
                 </div>
             </div>

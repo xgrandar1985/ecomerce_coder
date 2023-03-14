@@ -6,6 +6,7 @@ import { db } from '../firebaseConfig/firebase.js';
 import {collection,getDocs,deleteDoc,doc,getDoc} from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { useNavigate,useParams } from "react-router-dom";
+import "./styles/OrderContainer.css"
 
 const OrderContainer = () => {
 
@@ -20,6 +21,7 @@ const OrderContainer = () => {
 
       if (orden.exists()) {
         setOrder({...orden.data(),id:ordenid})
+        console.log(order)
       } else {
         console.log("No such document!");
       }
@@ -93,22 +95,25 @@ const OrderContainer = () => {
               
               </div>
             </div>
-            <div className='row mt-3'>
+         
+          </div>
+          <div className='row mt-1'>
             <div className='col-3'>
-             
-            </div>
-            </div>
+            <p className='ubicarIzquierda'><b>Nombre y apellido:</b> {order.cliente.nombre} {order.cliente.apellido}</p>
+            <p className='ubicarIzquierda'><b>Correo:</b> {order.cliente.correo}</p>
+            <p className='ubicarIzquierda'><b>Telefono:</b> {order.cliente.telefono}</p>
+          </div>
           </div>
           <div className="row">
-        <div className="col-md-12 mb-4">
-          <hr />
-          <div className="text-muted my-4">
-                <Link to={"/"} className="btn btn-outline-dark" replace>
-                    Regresar a inicio
-                </Link>
+            <div className="col-md-12 mb-4">
+              <hr />
+              <div className="text-muted my-4">
+                    <Link to={"/"} className="btn btn-outline-dark" replace>
+                        Regresar a inicio
+                    </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           </>
           :
           <div>
